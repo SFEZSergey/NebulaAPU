@@ -1,0 +1,42 @@
+artifacts/
+bin/
+obj/
+.vs/
+
+*.user
+*.suo
+
+*.a
+*.dll
+*.exe
+*.lib
+*.o
+*.obj
+*.pdb
+
+*.bin
+*.dmp
+*.elf
+*.log
+*.pfs
+*.pkg
+*.prx
+*.self
+*.spv
+*.sprx
+
+.env
+.env.*
+
+# Session transcript dumps, not project sources
+GPT-*.txt
+
+# Python bytecode from the tools directory
+__pycache__/
+
+# Local working notes, not part of the project.
+CLAUDE.md
+
+# Local profile with paths to the user's own dump (copy of the example)
+profiles/astrobot.toml
+profiles/*.local.toml

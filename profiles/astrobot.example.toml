@@ -1,0 +1,40 @@
+# Copy to profiles/astrobot.toml and set the two paths to your own dump.
+# profiles/astrobot.toml is ignored by Git.
+
+# Copyright (C) 2026 NebulaAPU contributors
+# SPDX-License-Identifier: GPL-2.0-only
+
+[game]
+title_id = "PPSA21567"
+title = "ASTRO BOT"
+version = "01.018.000"
+image_sha256 = "C3E9F057859643E7DF104223E32ECD82E5A223C97CA3B8216E727A3A85624D89"
+runtime_abi = 1
+input_path = "<path to your eboot.bin>"
+app0_path = "<path to your extracted dump>"
+
+[analysis]
+max_instructions = 5000000
+allow_partial_cfg = true
+
+[build]
+backend = "native"
+cxx = "g++"
+jobs = 4
+cache_objects = true
+incremental = true
+
+[gpu]
+backend = "vulkan"
+
+[modules]
+required = [
+    "libkernel.sprx",
+    "libSceAgc.sprx",
+    "libSceAgcDriver.sprx",
+    "libSceVideoOut.sprx",
+    "libScePad.sprx",
+    "libSceAudioOut.sprx",
+    "libSceLibcInternal.sprx",
+    "libSceSysmodule.sprx",
+]

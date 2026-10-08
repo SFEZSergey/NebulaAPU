@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishAot>true</PublishAot>
+    <NativeLib>Shared</NativeLib>
+    <SelfContained>true</SelfContained>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Ps5GpuBridge</AssemblyName>
+    <RootNamespace>Ps5GpuBridge</RootNamespace>
+    <StripSymbols>true</StripSymbols>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Ps5Recomp.ShaderCompiler\Ps5Recomp.ShaderCompiler.csproj" />
+    <ProjectReference Include="..\..\src\Ps5Recomp.ShaderCompiler.Vulkan\Ps5Recomp.ShaderCompiler.Vulkan.csproj" />
+  </ItemGroup>
+</Project>

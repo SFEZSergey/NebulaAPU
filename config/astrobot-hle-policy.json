@@ -1,0 +1,18 @@
+{
+  "permissive": true,
+  "defaultReturn": 0,
+  "rules": {
+    "RW-GEfpnsqg": {
+      "return": "0x80020001",
+      "name": "kevent"
+    },
+    "D4yla3vx4tY": {
+      "return": "0x80020001",
+      "name": "sceKernelError"
+    },
+    "SUEVes8gvmw": {
+      "return": 0,
+      "name": "sceRudpSetEventHandler"
+    }
+  }
+}

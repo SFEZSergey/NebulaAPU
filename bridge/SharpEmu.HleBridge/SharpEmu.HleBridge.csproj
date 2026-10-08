@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishAot>true</PublishAot>
+    <NativeLib>Shared</NativeLib>
+    <SelfContained>true</SelfContained>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Ps5HleBridge</AssemblyName>
+    <RootNamespace>Ps5HleBridge</RootNamespace>
+    <StripSymbols>true</StripSymbols>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <SharpEmuRoot Condition="'$(SharpEmuRoot)' == ''">..\..\..\sharpemu</SharpEmuRoot>
+    <SharpEmuBin Condition="'$(SharpEmuBin)' == ''">$(SharpEmuRoot)\artifacts\bin\Debug\net10.0</SharpEmuBin>
+    <ILLinkTargetsPath>$(MSBuildThisFileDirectory)Microsoft.NET.ILLink.InProc.targets</ILLinkTargetsPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SharpEmu.HLE">
+      <HintPath>$(SharpEmuBin)\SharpEmu.HLE.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.Libs">
+      <HintPath>$(SharpEmuBin)\SharpEmu.Libs.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.LibAtrac9">
+      <HintPath>$(SharpEmuBin)\SharpEmu.LibAtrac9.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.Logging">
+      <HintPath>$(SharpEmuBin)\SharpEmu.Logging.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.ShaderCompiler">
+      <HintPath>$(SharpEmuBin)\SharpEmu.ShaderCompiler.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.ShaderCompiler.Vulkan">
+      <HintPath>$(SharpEmuBin)\SharpEmu.ShaderCompiler.Vulkan.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SharpEmu.ShaderCompiler.Metal">
+      <HintPath>$(SharpEmuBin)\SharpEmu.ShaderCompiler.Metal.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FFmpeg.AutoGen" Version="7.1.1" />
+    <PackageReference Include="NLayer" Version="1.14.0" />
+    <PackageReference Include="ppy.SDL3-CS" Version="2026.629.0" />
+    <PackageReference Include="Silk.NET.Vulkan" Version="2.23.0" />
+    <PackageReference Include="Silk.NET.Vulkan.Extensions.EXT" Version="2.23.0" />
+    <PackageReference Include="Silk.NET.Vulkan.Extensions.KHR" Version="2.23.0" />
+  </ItemGroup>
+</Project>

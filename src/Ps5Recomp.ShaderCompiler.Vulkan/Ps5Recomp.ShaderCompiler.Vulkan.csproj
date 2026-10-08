@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NuGetAudit>false</NuGetAudit>
+    <RestoreSources></RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ps5Recomp.ShaderCompiler\Ps5Recomp.ShaderCompiler.csproj" />
+  </ItemGroup>
+</Project>
